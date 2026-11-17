@@ -6,12 +6,12 @@
     <title>Apollo System | Quick Reference Map</title>
     <style>
         :root {
-            --bg-color: #0f141c;
-            --card-bg: #18202c;
-            --text-main: #f3f4f6;
-            --text-muted: #9ca3af;
-            --accent: #818cf8;
-            --border: #2a3447;
+            --bg-color: #2e1a3b;        /* Eggplant */
+            --card-bg: #3a224c;         /* Slightly lighter eggplant for cards */
+            --text-main: #d8b4fe;       /* Lilac */
+            --text-muted: #c4b5fd;      /* Muted lilac */
+            --accent: #facc15;          /* Golden sunflower */
+            --border: #facc15;          /* Golden sunflower */
         }
 
         * {
@@ -36,36 +36,39 @@
         header {
             text-align: center;
             margin-bottom: 2.5rem;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 1.5rem;
         }
 
         header h1 {
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: 700;
+            color: var(--accent);
             margin-bottom: 0.25rem;
             letter-spacing: -0.025em;
         }
 
         header p {
-            color: var(--text-muted);
+            color: var(--text-main);
             font-size: 0.95rem;
         }
 
         .card {
             background-color: var(--card-bg);
-            border: 1px solid var(--border);
+            border: 2px solid var(--border);
             border-radius: 12px;
             padding: 1.5rem;
             margin-bottom: 1.5rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 4px 12px rgba(250, 204, 21, 0.15);
         }
 
         h2 {
-            font-size: 1.1rem;
-            font-weight: 600;
+            font-size: 1.2rem;
+            font-weight: 700;
             color: var(--accent);
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            margin-bottom: 1rem;
+            margin-bottom: 1.25rem;
             padding-bottom: 0.5rem;
             border-bottom: 1px solid var(--border);
         }
@@ -73,24 +76,39 @@
         .member-list {
             display: flex;
             flex-direction: column;
-            gap: 1.25rem;
+            gap: 1.5rem;
         }
 
         .member-item {
             display: flex;
             flex-direction: column;
-            gap: 0.25rem;
+            gap: 0.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px dashed rgba(250, 204, 21, 0.3);
+        }
+
+        .member-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
         }
 
         .member-name {
-            font-weight: 600;
-            font-size: 1.05rem;
-            color: #ffffff;
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: var(--accent);
+            margin-bottom: 0.15rem;
         }
 
-        .member-desc {
-            color: var(--text-muted);
+        .marker-block {
             font-size: 0.9rem;
+            color: var(--text-main);
+            margin-bottom: 0.3rem;
+        }
+
+        .marker-title {
+            font-weight: bold;
+            text-decoration: underline;
+            color: var(--accent);
         }
 
         .system-info {
@@ -102,11 +120,12 @@
 
         .system-info div span {
             display: block;
-            color: var(--text-muted);
+            color: var(--accent);
             font-size: 0.8rem;
             text-transform: uppercase;
             letter-spacing: 0.05em;
             margin-bottom: 0.15rem;
+            font-weight: bold;
         }
 
         .tips-list {
@@ -120,22 +139,25 @@
             position: relative;
             padding-left: 1.25rem;
             font-size: 0.95rem;
-            color: var(--text-muted);
+            color: var(--text-main);
         }
 
         .tips-list li::before {
-            content: "•";
+            content: "✦";
             position: absolute;
             left: 0;
             color: var(--accent);
-            font-weight: bold;
+            font-size: 0.8rem;
+            top: 2px;
         }
 
         footer {
             text-align: center;
             margin-top: 3rem;
             font-size: 0.8rem;
-            color: var(--text-muted);
+            color: var(--accent);
+            border-top: 1px solid var(--accent);
+            padding-top: 1rem;
         }
 
         @media (min-width: 640px) {
@@ -168,30 +190,61 @@
             </div>
         </section>
 
-        <!-- Main Hosting Lineup -->
+        <!-- Main Hosting Lineup & Identity Markers -->
         <section class="card">
-            <h2>Hosting Lineup & Personalities</h2>
+            <h2>Hosting Lineup & Identity Markers</h2>
             <div class="member-list">
+                
+                <!-- Joe -->
                 <div class="member-item">
                     <span class="member-name">Joe</span>
-                    <span class="member-desc">Manages daily survival tasks, medicine compliance, and creative artistry. Direct, casual, and grounded.</span>
+                    <div class="marker-block"><span class="marker-title">Primary Role</span>》Daily survival tasks, medicine compliance, and creative artistry.</div>
+                    <div class="marker-block"><span class="marker-title">Energy Baseline</span>》Grounded, practical, but can be quietly intense when deep in creative focus.</div>
+                    <div class="marker-block"><span class="marker-title">Communication Style</span>》Direct, casual, and straightforward; prefers getting straight to the point or talking shop about art and projects.</div>
+                    <div class="marker-block"><span class="marker-title">Stylistic / Identity Markers</span>》Often associated with the system's creative outlets, visual design concepts, and daily routines.</div>
+                    <div class="marker-block"><span class="marker-title">Support / Comfort Cues</span>》Appreciates gentle reminders for basic care if overwhelmed, and respects quiet zones during creative flow.</div>
                 </div>
+
+                <!-- Keith -->
                 <div class="member-item">
                     <span class="member-name">Keith</span>
-                    <span class="member-desc">Loves automobile scene topics and car culture, though not mechanically adept under the hood. <em>Note: May slip into a faint English-muddled-Scottish accent when overwhelmed.</em></span>
+                    <div class="marker-block"><span class="marker-title">Primary Role</span>》Mechanically inclined tasks and hands-on technical tinkering.</div>
+                    <div class="marker-block"><span class="marker-title">Energy Baseline</span>》Focused, active, and eager to dive into physical problem-solving.</div>
+                    <div class="marker-block"><span class="marker-title">Communication Style</span>》Practical, solution-oriented, and engaged when working with tools or physical objects; thrives on automobile scene topic conversations, though not mechanically adept under the hood.</div>
+                    <div class="marker-block"><span class="marker-title">Stylistic / Identity Markers</span>》Often recognized when dealing with physical repairs, tinkering with objects (like watches or gear), or handling manual setups. <em>Note: May slip into a faint English-muddled-Scottish accent when overwhelmed.</em></div>
+                    <div class="marker-block"><span class="marker-title">Support / Comfort Cues</span>》Thrives when given hands-on tasks or physical projects; enjoys collaborating on tangible fixes.</div>
                 </div>
+
+                <!-- Russ / Reese -->
                 <div class="member-item">
                     <span class="member-name">Russ / Reese</span>
-                    <span class="member-desc">Handles IT technical issues, troubleshooting, digital tools, and logistical execution with analytical calm.</span>
+                    <div class="marker-block"><span class="marker-title">Primary Role</span>》IT technical issues, troubleshooting, and logistical execution.</div>
+                    <div class="marker-block"><span class="marker-title">Energy Baseline</span>》Analytical, calm under pressure, and systematic.</div>
+                    <div class="marker-block"><span class="marker-title">Communication Style</span>》Precise, logical, and structured; great at breaking down complex digital or technical problems step-by-step.</div>
+                    <div class="marker-block"><span class="marker-title">Stylistic / Identity Markers</span>》Usually at the helm when dealing with computer troubleshooting, software fixes, or managing logistical puzzles.</div>
+                    <div class="marker-block"><span class="marker-title">Support / Comfort Cues</span>》Give space to think through technical hurdles; highly reliable when system logistics or digital environments act up.</div>
                 </div>
+
+                <!-- Will -->
                 <div class="member-item">
                     <span class="member-name">Will</span>
-                    <span class="member-desc">Easygoing, neutral perspective with a natural talent for task scheduling and keeping things balanced.</span>
+                    <div class="marker-block"><span class="marker-title">Primary Role</span>》Task scheduling, long-term organization, and maintaining an even keel.</div>
+                    <div class="marker-block"><span class="marker-title">Energy Baseline</span>》Easygoing, neutral, and balanced; acts as a steady stabilizing presence.</div>
+                    <div class="marker-block"><span class="marker-title">Communication Style</span>》Conversational, low-pressure, and adaptable; approachable for general check-ins or mapping out upcoming plans.</div>
+                    <div class="marker-block"><span class="marker-title">Stylistic / Identity Markers</span>》Often steps in when schedules need aligning, calendars need organizing, or a neutral perspective is required.</div>
+                    <div class="marker-block"><span class="marker-title">Support / Comfort Cues</span>》Responds well to calm environments and structured, low-stress planning sessions.</div>
                 </div>
+
+                <!-- Crayne / Crane -->
                 <div class="member-item">
                     <span class="member-name">Crayne / Crane</span>
-                    <span class="member-desc">The playful jester! Shifts topics to fun or stress-relieving activities when the system is overwhelmed. Easily prone to classic "oo, shiny!" moments of distraction.</span>
+                    <div class="marker-block"><span class="marker-title">Primary Role</span>》Adaptable external navigation and versatile social engagement.</div>
+                    <div class="marker-block"><span class="marker-title">Energy Baseline</span>》Alert, flexible, and responsive to changing social dynamics.</div>
+                    <div class="marker-block"><span class="marker-title">Communication Style</span>》Direct, highly adaptable, and reads the room quickly.</div>
+                    <div class="marker-block"><span class="marker-title">Stylistic / Identity Markers</span>》The playful jester! Shifts topics to fun or stress-relieving activities when the system is overwhelmed. Easily prone to classic "oo, shiny!" moments of distraction.</div>
+                    <div class="marker-block"><span class="marker-title">Support / Comfort Cues</span>》Appreciates clear communication and straightforward interactions without hidden subtext.</div>
                 </div>
+
             </div>
         </section>
 
@@ -201,11 +254,11 @@
             <div class="member-list">
                 <div class="member-item">
                     <span class="member-name">Graham & Tyler</span>
-                    <span class="member-desc">Internal support and system stability management.</span>
+                    <div class="marker-block"><span class="marker-title">Role</span>》Internal support and system stability management.</div>
                 </div>
                 <div class="member-item">
                     <span class="member-name">Wes & Bones</span>
-                    <span class="member-desc">Grounding and structural maintenance support.</span>
+                    <div class="marker-block"><span class="marker-title">Role</span>》Grounding and structural maintenance support.</div>
                 </div>
             </div>
         </section>
@@ -215,7 +268,7 @@
             <h2>Tips for Interacting</h2>
             <ul class="tips-list">
                 <li><strong>Check-ins are welcome:</strong> If you aren't sure who is out or want clarification, a gentle "Hey, who am I chatting with?" is always appreciated.</li>
-                <li><strong>Allow transition room:</strong> Give a brief moment of patience if fronting shifts, accents adjust under stress, or playful tangents pop up!</li>
+                <li><strong>Allow transition room:</strong> Give a brief moment of patience if fronting shifts, accents adjust under stress, or playful tangents pop up.</li>
                 <li><strong>Respect preferences:</strong> Keep communication warm, kind, and tailored to whoever is currently present.</li>
             </ul>
         </section>

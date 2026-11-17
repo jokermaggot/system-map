@@ -41,7 +41,7 @@
         header h1 {
             font-size: 1.8rem;
             font-weight: 700;
-            margin-bottom: 0.5rre;
+            margin-bottom: 0.25rem;
             letter-spacing: -0.025em;
         }
 
@@ -90,6 +90,22 @@
         .member-desc {
             color: var(--text-muted);
             font-size: 0.9rem;
+        }
+
+        .system-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .system-info div span {
+            display: block;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.15rem;
         }
 
         .tips-list {
@@ -144,25 +160,40 @@
             <p>A quick reference guide for friends, family, and loved ones.</p>
         </header>
 
+        <!-- System Profile / Details -->
+        <section class="card">
+            <h2>System Details</h2>
+            <div class="system-info">
+                <div>
+                    <span>System Type</span>
+                    <strong>Polyfrag System</strong>
+                </div>
+                <div>
+                    <span>Primary Focus</span>
+                    <strong>External Hosting & Navigation</strong>
+                </div>
+            </div>
+        </section>
+
         <!-- Main Hosting Party -->
         <section class="card">
             <h2>Hosting Lineup</h2>
             <div class="member-list">
                 <div class="member-item">
                     <span class="member-name">Joe</span>
-                    <span class="member-desc">Primary host; direct, casual communication style.</span>
+                    <span class="member-desc">Manages daily survival tasks, medicine compliance, and creative artistry.</span>
                 </div>
                 <div class="member-item">
                     <span class="member-name">Keith</span>
-                    <span class="member-desc">Frequent fronter; easygoing, analytical approach.</span>
+                    <span class="member-desc">Mechanically inclined; loves hands-on technical tasks.</span>
                 </div>
                 <div class="member-item">
                     <span class="member-name">Russ / Reese</span>
-                    <span class="member-desc">Practical, task-oriented, grounded execution.</span>
+                    <span class="member-desc">Handles IT technical issues, troubleshooting, and execution.</span>
                 </div>
                 <div class="member-item">
                     <span class="member-name">Will</span>
-                    <span class="member-desc">Creative perspective, relaxed demeanor.</span>
+                    <span class="member-desc">Neutral perspective, easygoing demeanor, task-scheduling nature.</span>
                 </div>
                 <div class="member-item">
                     <span class="member-name">Crayne / Crane</span>
